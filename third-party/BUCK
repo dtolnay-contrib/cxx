@@ -410,6 +410,26 @@ cargo.rust_library(
     visibility = [],
 )
 
+cargo.rust_library(
+    name = "third-party",
+    srcs = ["src/lib.rs"],
+    crate = "third_party",
+    crate_root = "src/lib.rs",
+    edition = "2015",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":cc-1.0.79",
+        ":clap-4.3.0",
+        ":codespan-reporting-0.11.1",
+        ":once_cell-1.17.1",
+        ":proc-macro2-1.0.59",
+        ":quote-1.0.28",
+        ":scratch-1.0.5",
+        ":serde-1.0.163",
+        ":syn-2.0.17",
+    ],
+)
+
 http_archive(
     name = "unicode-ident-1.0.9.crate",
     sha256 = "b15811caf2415fb889178633e7724bad2509101cde276048e013b9def5e51fa0",

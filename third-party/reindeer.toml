@@ -1,4 +1,5 @@
 vendor = false
+include_top_level = true
 
 [buck]
 generated_file_header = """
